@@ -1,10 +1,5 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>
-      |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view/>
     <SignUpBar/>
     <Footer/>
@@ -50,5 +45,51 @@ export default {
     max-width: 1330px;
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  /* ----- BUTTONS ----- */
+  .btn:link,
+  .btn:visited,
+  input[type=submit] {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+  }
+
+  .btn-full:link,
+  .btn-full:visited,
+  input[type=submit] {
+    background-color: #b77d64;
+    border: 1px solid #b77d64;
+    color: #fff;
+    margin-right: 15px;
+  }
+
+  .btn-ghost:link,
+  .btn-ghost:visited {
+    border: 1px solid #b77d64;
+    color: #b77d64;
+  }
+
+  .btn:hover,
+  .btn:active,
+  input[type=submit]:hover,
+  input[type=submit]:active {
+    background-color: #b77d64;
+  }
+
+  .btn-full:hover,
+  .btn-full:active {
+    border: 1px solid #b77d64;
+  }
+
+  .btn-ghost:hover,
+  .btn-ghost:active {
+    border: 1px solid #b77d64;
+    color: #fff;
   }
 </style>
