@@ -2,8 +2,8 @@
   <nav v-bind:class="{ sticky: useSticky }">
     <div class="container">
       <router-link to="/">
-        <img src="../assets/fh_white_188_188.png" alt="Logo" class="logo">
-        <img src="../assets/logo.png" alt="Logo" class="logo-black">
+        <img src="../assets/fh_white_188_188.png" alt="FH Logo" class="logo">
+        <img src="../assets/fh_black_310_310.png" alt="FH Logo" class="logo-black">
       </router-link>
       <ul class="main-nav js--main-nav">
         <li><a href="#">Shop</a></li>

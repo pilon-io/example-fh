@@ -4,6 +4,8 @@
     <div class="container">
       <div class="about-content">
         <h1>This is an about page</h1>
+        <p>This is about content.  Here is some more content.</p>
+        <p>More content about Facial Hair.</p>
       </div>
     </div>
   </div>

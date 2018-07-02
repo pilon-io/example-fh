@@ -3,7 +3,6 @@
     <HomeHeader/>
     <div class="container">
       <div class="home-content">
-        <img src="../assets/logo.png">
         <HelloWorld msg="Welcome to Your Vue.js App"/>
       </div>
     </div>
