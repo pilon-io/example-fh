@@ -16,6 +16,9 @@ export default {
     Footer,
     SignUpBar,
   },
+  created() {
+    this.$store.dispatch('tryAuthFromLocalStorage');
+  },
 };
 </script>
 

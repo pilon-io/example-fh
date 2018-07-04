@@ -14,7 +14,7 @@ import HelloWorld from '@/components/HelloWorld.vue';
 import HomeHeader from '@/components/HomeHeader.vue';
 
 export default {
-  name: 'home',
+  name: 'Home',
   components: {
     HelloWorld,
     HomeHeader,

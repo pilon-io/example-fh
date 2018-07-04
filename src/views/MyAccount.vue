@@ -1,11 +1,9 @@
 <template>
-  <div class="about">
+  <div class="my-account">
     <Header/>
     <div class="container">
-      <div class="about-content">
-        <h1>This is an about page</h1>
-        <p>This is about content.  Here is some more content.</p>
-        <p>More content about Facial Hair.</p>
+      <div class="my-account-content">
+        <h1>My Account</h1>
       </div>
     </div>
   </div>
@@ -15,7 +13,7 @@
 import Header from '@/components/Header.vue';
 
 export default {
-  name: 'About',
+  name: 'MyAccount',
   components: {
     Header,
   },
@@ -23,7 +21,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .about-content {
+  .my-account-content {
     margin-top: 80px;
     min-height: 360px;
   }

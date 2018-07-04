@@ -9,7 +9,10 @@
         <li><a href="#">Shop</a></li>
         <li><a href="#">How it works</a></li>
         <li><router-link to="/about">About</router-link></li>
-        <li><a href="#">Sign up</a></li>
+        <li><router-link to="/my-account">My Account</router-link></li>
+        <li v-if="!isAuthenticated"><router-link to="/login">Login</router-link></li>
+        <li v-if="!isAuthenticated"><a href="#">Sign up</a></li>
+        <li v-if="isAuthenticated"><a href="#" @click="onLogout">Logout</a></li>
       </ul>
       <a class="mobile-nav-icon js--nav-icon"><i class="fas fa-bars"></i></a>
       <div style="clear: both;"></div>
@@ -26,6 +29,16 @@ export default {
     useSticky: {
       type: Boolean,
       default: false,
+    },
+  },
+  computed: {
+    isAuthenticated() {
+      return this.$store.getters.isAuthenticated;
+    },
+  },
+  methods: {
+    onLogout() {
+      this.$store.dispatch('logout');
     },
   },
 };
@@ -60,6 +73,7 @@ export default {
     margin-left: 40px;
   }
 
+  .main-nav li a,
   .main-nav li a:link,
   .main-nav li a:visited {
     padding: 8px 0;

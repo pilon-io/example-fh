@@ -1,6 +1,6 @@
 <template>
   <header>
-    <Nav useSticky="true"/>
+    <Nav :useSticky="true"/>
   </header>
 </template>
 
