@@ -11,7 +11,7 @@
         <li><router-link to="/about">About</router-link></li>
         <li><router-link to="/my-account">My Account</router-link></li>
         <li v-if="!isAuthenticated"><router-link to="/login">Login</router-link></li>
-        <li v-if="!isAuthenticated"><a href="#">Sign up</a></li>
+        <li v-if="!isAuthenticated"><router-link to="/register">Register</router-link></li>
         <li v-if="isAuthenticated"><a href="#" @click="onLogout">Logout</a></li>
       </ul>
       <a class="mobile-nav-icon js--nav-icon"><i class="fas fa-bars"></i></a>

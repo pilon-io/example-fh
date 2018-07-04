@@ -1,8 +1,22 @@
 <template>
   <div id="login">
     <Header/>
-    <div class="login-form">
+    <div class="register-form">
       <form @submit.prevent="onSubmit">
+        <div class="input">
+          <label for="firstName">First Name</label>
+          <input
+              type="text"
+              id="firstName"
+              v-model="firstName">
+        </div>
+        <div class="input">
+          <label for="lastName">Last Name</label>
+          <input
+              type="text"
+              id="lastName"
+              v-model="lastName">
+        </div>
         <div class="input">
           <label for="email">Email</label>
           <input
@@ -31,26 +45,25 @@ import Header from '@/components/Header.vue';
 export default {
   data() {
     return {
+      firstName: '',
+      lastName: '',
       email: '',
       password: '',
-      redirectTo: null,
     };
   },
   components: {
     Header,
   },
-  created: function () {
-    this.redirectTo = this.$route.query.redirect;
-  },
   methods: {
     onSubmit() {
       const formData = {
+        firstName: this.firstName,
+        lastName: this.lastName,
         email: this.email,
         password: this.password,
-        redirectTo: this.redirectTo,
       };
       this.$store.dispatch(
-        'login',
+        'register',
         formData,
       );
     },
@@ -59,7 +72,7 @@ export default {
 </script>
 
 <style scoped>
-  .login-form {
+  .register-form {
     width: 400px;
     margin: 100px auto 40px;
     border: 1px solid #eee;
