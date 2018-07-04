@@ -5,6 +5,7 @@ import Login from './views/Auth/Login.vue';
 import Register from './views/Auth/Register.vue';
 import About from './views/About.vue';
 import MyAccount from './views/MyAccount.vue';
+import ProductList from './views/ProductList.vue';
 import store from './store';
 
 Vue.use(Router);
@@ -41,6 +42,11 @@ const router = new Router({
       meta: {
         requiresAuth: true,
       },
+    },
+    {
+      path: '/shop',
+      name: 'ProductList',
+      component: ProductList,
     },
   ],
 });
