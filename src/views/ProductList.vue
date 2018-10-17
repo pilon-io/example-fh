@@ -32,36 +32,37 @@ export default {
       products: [],
     };
   },
-  computed: {
-  },
-  mounted: function () {
+  computed: {},
+  mounted() {
     // Get a public token
-    config.pilonApi.post('/token', {
-      token_scope: 'public',
-      environment_id: config.environmentId,
-    })
-      .then((resToken) => {
-        config.pilonApi.get('/products', {
-          headers: {
-            Authorization: `Bearer ${resToken.data.token}`,
-            Accept: 'application/json',
-          },
-        })
-          .then((res) => {
+    config.pilonApi
+      .post('/token', {
+        token_scope: 'public',
+        environment_id: config.environmentId,
+      })
+      .then(resToken => {
+        config.pilonApi
+          .get('/products', {
+            headers: {
+              Authorization: `Bearer ${resToken.data.token}`,
+              Accept: 'application/json',
+            },
+          })
+          .then(res => {
             console.log(res.data);
             this.products = res.data;
           });
       });
-  }
+  },
 };
 </script>
 
 <style scoped lang="scss">
-  .product-list-content {
-    margin-top: 80px;
-    min-height: 360px;
-  }
-  .product-list-items {
-    display: flex;
-  }
+.product-list-content {
+  margin-top: 80px;
+  min-height: 360px;
+}
+.product-list-items {
+  display: flex;
+}
 </style>

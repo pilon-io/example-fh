@@ -49,22 +49,28 @@ export default new Vuex.Store({
   actions: {
     register({ dispatch }, customerData) {
       // Get a public token
-      config.pilonApi.post('/token', {
-        token_scope: 'public',
-        environment_id: config.environmentId,
-      })
-        .then((resToken) => {
-          config.pilonApi.post('/customers', {
-            environment: `/api/environments/${config.environmentId}`,
-            first_name: customerData.firstName,
-            last_name: customerData.lastName,
-            email: customerData.email,
-            password: customerData.password,
-          }, {
-            headers: {
-              Authorization: `Bearer ${resToken.data.token}`,
-            },
-          })
+      config.pilonApi
+        .post('/token', {
+          token_scope: 'public',
+          environment_id: config.environmentId,
+        })
+        .then(resToken => {
+          config.pilonApi
+            .post(
+              '/customers',
+              {
+                environment: `/api/environments/${config.environmentId}`,
+                first_name: customerData.firstName,
+                last_name: customerData.lastName,
+                email: customerData.email,
+                password: customerData.password,
+              },
+              {
+                headers: {
+                  Authorization: `Bearer ${resToken.data.token}`,
+                },
+              },
+            )
             .then(() => {
               dispatch('login', {
                 email: customerData.email,
@@ -75,16 +81,19 @@ export default new Vuex.Store({
         });
     },
     login({ commit, dispatch }, authData) {
-      config.pilonApi.post('/token', {
-        token_scope: 'customer',
-        environment_id: config.environmentId,
-        customer_email: authData.email,
-        password: authData.password,
-      })
-        .then((res) => {
+      config.pilonApi
+        .post('/token', {
+          token_scope: 'customer',
+          environment_id: config.environmentId,
+          customer_email: authData.email,
+          password: authData.password,
+        })
+        .then(res => {
           // Calculate expiration times
           const now = new Date();
-          const expirationDate = new Date(now.getTime() + (res.data.expires_in * 1000));
+          const expirationDate = new Date(
+            now.getTime() + res.data.expires_in * 1000,
+          );
           // Build authData
           const authState = {
             token: res.data.token,
@@ -104,7 +113,8 @@ export default new Vuex.Store({
           // Fetch customer
           dispatch('fetchCustomerDetails', authState.customerId);
           // Redirect
-          const redirectTo = typeof authData.redirectTo === 'string' ? authData.redirectTo : '/';
+          const redirectTo =
+            typeof authData.redirectTo === 'string' ? authData.redirectTo : '/';
           router.push(redirectTo);
         })
         .catch(error => console.log(error));
@@ -152,12 +162,13 @@ export default new Vuex.Store({
       }, expirationTime * 1000);
     },
     fetchCustomerDetails({ commit, state }, customerId) {
-      config.pilonApi.get(`/customers/${customerId}`, {
-        headers: {
-          Authorization: `Bearer ${state.auth.token}`,
-        },
-      })
-        .then((res) => {
+      config.pilonApi
+        .get(`/customers/${customerId}`, {
+          headers: {
+            Authorization: `Bearer ${state.auth.token}`,
+          },
+        })
+        .then(res => {
           commit('setAuthenticatedCustomer', res.data);
         });
     },

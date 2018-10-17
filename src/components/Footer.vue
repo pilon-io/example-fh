@@ -62,63 +62,67 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  footer {
-    color: #fff;
-    background-color: #232e39;
-    padding: 30px 0 20px 0;
-    .nav {
-      list-style: none;
-      padding: 0;
-      a {
-        -o-transition: .2s;
-        -ms-transition: .2s;
-        -moz-transition: .2s;
-        -webkit-transition: .2s;
-        transition: .2s;
-      }
-      a:link, a:visited {
-        text-decoration: none;
-        color: #fff;
-      }
-      a:hover, a:active {
-        color: #b77d64;
-      }
+footer {
+  color: #fff;
+  background-color: #232e39;
+  padding: 30px 0 20px 0;
+  .nav {
+    list-style: none;
+    padding: 0;
+    a {
+      -o-transition: 0.2s;
+      -ms-transition: 0.2s;
+      -moz-transition: 0.2s;
+      -webkit-transition: 0.2s;
+      transition: 0.2s;
     }
-    .nav-container {
-      display: flex;
-      .nav-box {
-        margin: 0 30px;
-        .nav-title {
-          border-bottom: 1px solid rgba(86, 95, 103, .53);
-          padding-bottom: 10px;
-          text-transform: uppercase;
-        }
-      }
-      .nav-box-image {
-        margin: 0 40px 0 auto;
-        align-self: center;
-      }
+    a:link,
+    a:visited {
+      text-decoration: none;
+      color: #fff;
     }
-    .copyright-container {
-      color: #565f67;
-      padding: 20px 0 40px 0;
-      border-top: 1px solid rgba(86, 95, 103, .53);
-      .nav {
-        display: flex;
-        .item {
-          display: block;
-          margin: 20px;
-          a:link, a:visited {
-            color: #565f67;
-          }
-          a:hover, a:active {
-            color: #b77d64;
-          }
-        }
-      }
-    }
-    small {
-      font-size: 12px;
+    a:hover,
+    a:active {
+      color: #b77d64;
     }
   }
+  .nav-container {
+    display: flex;
+    .nav-box {
+      margin: 0 30px;
+      .nav-title {
+        border-bottom: 1px solid rgba(86, 95, 103, 0.53);
+        padding-bottom: 10px;
+        text-transform: uppercase;
+      }
+    }
+    .nav-box-image {
+      margin: 0 40px 0 auto;
+      align-self: center;
+    }
+  }
+  .copyright-container {
+    color: #565f67;
+    padding: 20px 0 40px 0;
+    border-top: 1px solid rgba(86, 95, 103, 0.53);
+    .nav {
+      display: flex;
+      .item {
+        display: block;
+        margin: 20px;
+        a:link,
+        a:visited {
+          color: #565f67;
+        }
+        a:hover,
+        a:active {
+          color: #b77d64;
+        }
+      }
+    }
+  }
+  small {
+    font-size: 12px;
+  }
+}
 </style>

@@ -21,44 +21,44 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .sign-up {
-    background-color: #b77d64;
-    color: #fff;
-    font-size: 30px;
-    padding: 60px 0 60px 0;
-    .sign-up-items {
-      display: flex;
-      align-items: center;
-      justify-items: center;
-      .item-left {
-        margin: 30px;
-      }
-      .item-right {
-        margin: 30px;
-      }
+.sign-up {
+  background-color: #b77d64;
+  color: #fff;
+  font-size: 30px;
+  padding: 60px 0 60px 0;
+  .sign-up-items {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    .item-left {
+      margin: 30px;
     }
-    .button {
-      width: 170px;
-      border: 1px solid #fff;
-      background-color: transparent;
-      transition:
-          background .1s cubic-bezier(.55,.09,.68,.53),
-          color .1s cubic-bezier(.55,.09,.68,.53);
-      position: relative;
-      outline: 0;
-      color: #fff;
-      display: inline-block;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 50px;
-      padding: 12px 30px;
-      font-size: 16px;
-      line-height: 16px;
-      cursor: pointer;
-    }
-    a.button:hover, a.button:active {
-      background-color: #fff;
-      color: #b77d64;
+    .item-right {
+      margin: 30px;
     }
   }
+  .button {
+    width: 170px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    transition: background 0.1s cubic-bezier(0.55, 0.09, 0.68, 0.53),
+      color 0.1s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+    position: relative;
+    outline: 0;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: 16px;
+    line-height: 16px;
+    cursor: pointer;
+  }
+  a.button:hover,
+  a.button:active {
+    background-color: #fff;
+    color: #b77d64;
+  }
+}
 </style>

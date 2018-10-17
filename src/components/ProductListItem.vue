@@ -9,12 +9,11 @@
 <script>
 export default {
   name: 'ProductListItem',
-  components: {
-  },
+  components: {},
   props: {
     productData: {
       type: Object,
-      default: function() {
+      default() {
         return {
           id: '',
           sku: '',
@@ -29,7 +28,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .item {
-    width: 20%;
-  }
+.item {
+  width: 20%;
+}
 </style>

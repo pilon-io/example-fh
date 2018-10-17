@@ -43,14 +43,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .my-account-content {
-    margin-top: 80px;
-    min-height: 360px;
+.my-account-content {
+  margin-top: 80px;
+  min-height: 360px;
+}
+p.security-info {
+  word-wrap: break-word;
+  small {
+    font-size: 10px;
   }
-  p.security-info {
-    word-wrap: break-word;
-    small {
-      font-size: 10px;
-    }
-  }
+}
 </style>

@@ -23,8 +23,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .about-content {
-    margin-top: 80px;
-    min-height: 360px;
-  }
+.about-content {
+  margin-top: 80px;
+  min-height: 360px;
+}
 </style>

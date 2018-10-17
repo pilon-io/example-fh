@@ -46,31 +46,31 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  header {
-    background-image:
-        -webkit-linear-gradient(rgba(128,87,70, .4), rgba(0, 0, 0, .8)),
-        url(../assets/fh_bg_hero.jpg);
-    background-image:
-        linear-gradient(rgba(128,87,70, .4), rgba(0, 0, 0, .8)),
-        url(../assets/fh_bg_hero.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 55vh;
-    background-attachment: fixed;
-  }
+header {
+  background-image: -webkit-linear-gradient(
+      rgba(128, 87, 70, 0.4),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url(../assets/fh_bg_hero.jpg);
+  background-image: linear-gradient(rgba(128, 87, 70, 0.4), rgba(0, 0, 0, 0.8)),
+    url(../assets/fh_bg_hero.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 55vh;
+  background-attachment: fixed;
+}
 
-  .hero-box {
-    width: 1330px;
-    margin-top: 60px;
-    h1 {
-      margin-top: 0;
-      margin-bottom: 20px;
-      color: #fff;
-      font-size: 36px;
-      text-transform: uppercase;
-      word-spacing: 4px;
-      letter-spacing: 1px;
-    }
-
+.hero-box {
+  width: 1330px;
+  margin-top: 60px;
+  h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 36px;
+    text-transform: uppercase;
+    word-spacing: 4px;
+    letter-spacing: 1px;
   }
+}
 </style>

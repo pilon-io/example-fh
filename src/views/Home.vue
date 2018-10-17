@@ -23,8 +23,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .home-content {
-    text-align: center;
-    padding-top: 20px;
-  }
+.home-content {
+  text-align: center;
+  padding-top: 20px;
+}
 </style>
