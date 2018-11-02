@@ -15,6 +15,21 @@ cd example-fh
 npm install
 ```
 
+## Enter your Pilon Environment credential
+
+Make sure your have registered an environment on the Pilon platform.  You may also want to have setup some products in your catalog at this point.
+
+Open `src/config.js` in the project and enter your environment key:
+```javascript
+...
+
+export default {
+  pilonApiBaseUrl,
+  environmentId: 'YOUR_ENVIRONMENT_KEY_HERE',
+  pilonApi: axiosInstance,
+};
+```
+
 ## Run the local dev server
 ```bash
 npm run serve

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const pilonApiBaseUrl = 'http://local-api.spr0.com/api';
+const pilonApiBaseUrl = 'https://api.pilon.io/v1';
 
 const axiosInstance = axios.create({
   baseURL: pilonApiBaseUrl,
@@ -8,6 +8,6 @@ const axiosInstance = axios.create({
 
 export default {
   pilonApiBaseUrl,
-  environmentId: 'f16eb6bc-7cc5-11e8-9190-0242ac130008',
+  environmentId: 'YOUR_ENVIRONMENT_KEY_HERE',
   pilonApi: axiosInstance,
 };
