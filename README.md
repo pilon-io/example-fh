@@ -25,4 +25,4 @@ npm run serve
 Open `http://localhost:8080/`
 
 And there you go:
-![fh homepage](https://raw.githubusercontent.com/pilon-io/example-fh/branch/docs/fh_homepage_image.png)
+![fh homepage](https://raw.githubusercontent.com/pilon-io/example-fh/master/docs/fh_homepage_image.png)
