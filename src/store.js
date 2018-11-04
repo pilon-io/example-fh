@@ -59,7 +59,7 @@ export default new Vuex.Store({
             .post(
               '/customers',
               {
-                environment: `/api/environments/${config.environmentId}`,
+                environment: `/v1/environments/${config.environmentId}`,
                 first_name: customerData.firstName,
                 last_name: customerData.lastName,
                 email: customerData.email,
